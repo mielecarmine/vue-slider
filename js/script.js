@@ -34,6 +34,7 @@ const app = createApp({
   data() {
     return {
       activeImg: 0,
+      autoplay: false,
 
       slides: [
         {
@@ -80,5 +81,19 @@ const app = createApp({
         this.activeImg--;
       }
     },
+
+    setAutoPlay() {
+      this.autoplay = setInterval(() => {
+        this.nextSlide();
+      }, 3000);
+    },
+
+    stopAutoPlay() {
+      clearInterval(this.autoplay);
+    },
+  },
+
+  mounted() {
+    this.setAutoPlay();
   },
 }).mount("#app");

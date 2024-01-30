@@ -35,12 +35,16 @@
 .thumbs {
   float: left;
   height: 300px;
+  width: 300px;
   background: #000;
   position: relative;
+  font-size: 0;
 }
 
 .thumb {
-  height: calc((300px) / 5);
+  height: 60px;
+  width: 300px;
+
   opacity: 0.5;
 }
 
